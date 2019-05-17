@@ -30,8 +30,8 @@
 					vAxis:{title:'รายจ่าย (บาท)'},
 					width:800,
 					height:400,
-					bar:{groupWidth:"90%"},
-					legend:{position:"none"}
+					bar:{groupWidth:'90%'},
+					legend:{position:'none'}
 				};
 				var chart=new google.visualization.ColumnChart(document.getElementById('chart_1_bar'));
 				chart.draw(data,options);
@@ -84,10 +84,31 @@
 					vAxis:{title:'รายจ่าย (บาท)'},
 					width:800,
 					height:400,
-					bar:{groupWidth:"90%"},
-					legend:{position:"none"}
+					bar:{groupWidth:'90%'},
+					legend:{position:'none'}
 				};
 				var chart=new google.visualization.ColumnChart(document.getElementById('chart_3_deviation'));
+				chart.draw(data,options);
+			}
+		</script>
+		<div id="chart_4_histogram"></div>
+		<script>
+			google.charts.load('current',{packages:['corechart']});
+			google.charts.setOnLoadCallback(chart_4_histogram);
+			function chart_4_histogram()
+			{
+				var data=google.visualization.arrayToDataTable(
+				[
+					['Dinosaur','Length'],
+					['Acrocanthosaurus (top-spined lizard)',12.2],
+					['Velociraptor (swift robber)',1.8]
+				]);
+				var options=
+				{
+					title:'Lengths of dinosaurs,in meters',
+					legend:{position:'none'},
+				};
+				var chart=new google.visualization.Histogram(document.getElementById('chart_4_histogram'));
 				chart.draw(data,options);
 			}
 		</script>
