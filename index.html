@@ -62,5 +62,34 @@
 				chart.draw(data,options);
 			}
 		</script>
+		<div id="chart_3_deviation"></div>
+		<script>
+			google.charts.load('current',{packages:['corechart','bar']});
+			google.charts.setOnLoadCallback(chart_3_deviation);
+			function chart_3_deviation()
+			{
+				var data=google.visualization.arrayToDataTable(
+				[
+					['Type','อัตราเพิ่ม (บาท)'],
+					['อาหาร/เครื่องดื่ม',355],
+					['การเดินทาง',278.74],
+					['สินค้า',150],
+					['กิจกรรม',-1330],
+					['อื่นๆ',-4341.46]
+				]);
+				var options=
+				{
+					title:'รายจ่ายรวมแต่ละเดือน',
+					hAxis:{title:'เดือน/ปี'},
+					vAxis:{title:'รายจ่าย (บาท)'},
+					width:800,
+					height:400,
+					bar:{groupWidth:"90%"},
+					legend:{position:"none"}
+				};
+				var chart=new google.visualization.ColumnChart(document.getElementById('chart_3_deviation'));
+				chart.draw(data,options);
+			}
+		</script>
 	</body>
 </html>
