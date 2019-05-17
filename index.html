@@ -28,10 +28,10 @@
 					title:'รายจ่ายรวมแต่ละเดือน',
 					hAxis:{title:'เดือน/ปี'},
 					vAxis:{title:'รายจ่าย (บาท)'},
-					width:800,
-					height:400,
 					bar:{groupWidth:'90%'},
-					legend:{position:'none'}
+					legend:{position:'none'},
+					width:800,
+					height:400
 				};
 				var chart=new google.visualization.ColumnChart(document.getElementById('chart_1_bar'));
 				chart.draw(data,options);
@@ -82,10 +82,10 @@
 					title:'รายจ่ายแต่ละประเภท เดือน 5/2017 เทียบกับเดือน 4/2017',
 					hAxis:{title:'ประเภท'},
 					vAxis:{title:'รายจ่าย (บาท)'},
-					width:800,
-					height:400,
 					bar:{groupWidth:'90%'},
-					legend:{position:'none'}
+					legend:{position:'none'},
+					width:800,
+					height:400
 				};
 				var chart=new google.visualization.ColumnChart(document.getElementById('chart_3_deviation'));
 				chart.draw(data,options);
@@ -107,6 +107,8 @@
 				{
 					title:'Lengths of dinosaurs,in meters',
 					legend:{position:'none'},
+					width:800,
+					height:400
 				};
 				var chart=new google.visualization.Histogram(document.getElementById('chart_4_histogram'));
 				chart.draw(data,options);
