@@ -26,14 +26,8 @@
 				var options=
 				{
 					title:'รายจ่ายรวมแต่ละเดือน',
-					hAxis:
-					{
-						title:'เดือน/ปี'
-					},
-					vAxis:
-					{
-						title:'รายจ่าย (บาท)'
-					}
+					hAxis:{title:'เดือน/ปี'},
+					vAxis:{title:'รายจ่าย (บาท)'}
 				};
 				var chart = new google.visualization.ColumnChart(document.getElementById('chart_1_bar'));
 				chart.draw(data,options);
