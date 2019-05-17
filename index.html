@@ -13,7 +13,7 @@
 			{
 				var data=google.visualization.arrayToDataTable(
 				[
-					['Month','Pay'],
+					['Month','รายจ่าย (บาท)'],
 					['10/2016',9780.31],
 					['11/2016',19660.66],
 					['12/2016',12103.34],
@@ -31,7 +31,7 @@
 					width:800,
 					height:400,
 					bar:{groupWidth:"90%"},
-					legend:{position:"none"},
+					legend:{position:"none"}
 				};
 				var chart=new google.visualization.ColumnChart(document.getElementById('chart_1_bar'));
 				chart.draw(data,options);
@@ -45,7 +45,7 @@
 			{
 				var data=google.visualization.arrayToDataTable(
 				[
-					['Type','Pay'],
+					['Type','รายจ่าย (บาท)'],
 					['การเดินทาง',6972.69],
 					['กิจกรรม',1236.6],
 					['สินค้า',1056.67],
@@ -54,7 +54,9 @@
 				]);
 				var options=
 				{
-					title: 'My Daily Activities'
+					title:'รายจ่ายแต่ละประเภท เดือน 11/2016',
+					width:800,
+					height:400
 				};
 				var chart=new google.visualization.PieChart(document.getElementById('chart_2_pie'));
 				chart.draw(data,options);
