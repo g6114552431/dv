@@ -8,10 +8,10 @@
 		<div id="chart_1_bar"></div>
 		<script>
 			google.charts.load('current',{packages:['corechart','bar']});
-			google.charts.setOnLoadCallback(drawStacked);
-			function drawStacked()
+			google.charts.setOnLoadCallback(chart_1_bar);
+			function chart_1_bar()
 			{
-				var data = google.visualization.arrayToDataTable(
+				var data=google.visualization.arrayToDataTable(
 				[
 					['Month','Pay'],
 					['10/2016',9780.31],
@@ -21,7 +21,7 @@
 					['2/2017',11077.25],
 					['3/2017',7684.48],
 					['4/2017',12809.26],
-					['5/2017',7921.54],
+					['5/2017',7921.54]
 				]);
 				var options=
 				{
@@ -33,7 +33,30 @@
 					bar:{groupWidth:"90%"},
 					legend:{position:"none"},
 				};
-				var chart = new google.visualization.ColumnChart(document.getElementById('chart_1_bar'));
+				var chart=new google.visualization.ColumnChart(document.getElementById('chart_1_bar'));
+				chart.draw(data,options);
+			}
+		</script>
+		<div id="chart_2_pie"></div>
+		<script>
+			google.charts.load('current',{packages:['corechart']});
+			google.charts.setOnLoadCallback(chart_2_pie);
+			function chart_2_pie()
+			{
+				var data=google.visualization.arrayToDataTable(
+				[
+					['Type','Pay'],
+					['การเดินทาง',6972.69],
+					['กิจกรรม',1236.6],
+					['สินค้า',1056.67],
+					['อาหาร/เครื่องดื่ม',5897],
+					['อื่นๆ',4497.7]
+				]);
+				var options=
+				{
+					title: 'My Daily Activities'
+				};
+				var chart=new google.visualization.PieChart(document.getElementById('chart_2_pie'));
 				chart.draw(data,options);
 			}
 		</script>
