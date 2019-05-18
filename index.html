@@ -35,11 +35,7 @@
 					legend:{position:'none'},
 					width:800,
 					height:400,
-					animation:
-					{
-						// startup:true,
-						duration:1000,
-					}
+					animation:{duration:1000}
 				};
 				var chart=new google.visualization.ColumnChart(document.getElementById('chart_1_bar'));
 				var i=0;
@@ -50,7 +46,6 @@
 					if(i==data.length)
 					{
 						clearInterval(interval);
-						alert("clearInterval");
 					}
 				},1000);
 			}
