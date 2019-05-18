@@ -6,12 +6,29 @@
 		<h1>Data Visualization & Communication</h1>
 		<p>นาย นัทธร ทองกำเหนิด 6114552431</p>
 		<div id="chart_1_bar" style="width:800px;height:400px;"></div>
+		<div id="chart_2_pie" style="width:800px;height:400px;"></div>
+		<div id="chart_3_deviation" style="width:800px;height:400px;"></div>
+		<div id="chart_4_histogram" style="width:800px;height:400px;"></div>
+		<div id="chart_5_correlation" style="width:800px;height:400px;"></div>
+		<div id="chart_6_geo" style="width:800px;height:400px;"></div>
 		<script>
 			google.charts.load('current',{packages:['corechart','bar']});
 			google.charts.setOnLoadCallback(chart_1_bar);
 			function chart_1_bar()
 			{
-				var data=google.visualization.arrayToDataTable(
+				var data0=google.visualization.arrayToDataTable(
+				[
+					['Month','รายจ่าย (บาท)'],
+					['10/2016',0],
+					['11/2016',0],
+					['12/2016',0],
+					['1/2017',0],
+					['2/2017',0],
+					['3/2017',0],
+					['4/2017',0],
+					['5/2017',0]
+				]);
+				var data1=google.visualization.arrayToDataTable(
 				[
 					['Month','รายจ่าย (บาท)'],
 					['10/2016',9780.31],
@@ -31,13 +48,18 @@
 					bar:{groupWidth:'90%'},
 					legend:{position:'none'},
 					width:800,
-					height:400
+					height:400,
+					animation:
+					{
+						duration:1000,
+						easing:'out'
+					}
 				};
 				var chart=new google.visualization.ColumnChart(document.getElementById('chart_1_bar'));
-				chart.draw(data,options);
+				chart.draw(data0,options);
+				chart.draw(data1,options);
 			}
 		</script>
-		<div id="chart_2_pie" style="width:800px;height:400px;"></div>
 		<script>
 			google.charts.load('current',{packages:['corechart']});
 			google.charts.setOnLoadCallback(chart_2_pie);
@@ -62,7 +84,6 @@
 				chart.draw(data,options);
 			}
 		</script>
-		<div id="chart_3_deviation" style="width:800px;height:400px;"></div>
 		<script>
 			google.charts.load('current',{packages:['corechart','bar']});
 			google.charts.setOnLoadCallback(chart_3_deviation);
@@ -91,7 +112,6 @@
 				chart.draw(data,options);
 			}
 		</script>
-		<div id="chart_4_histogram" style="width:800px;height:400px;"></div>
 		<script>
 			google.charts.load('current',{packages:['corechart']});
 			google.charts.setOnLoadCallback(chart_4_histogram);
@@ -116,8 +136,6 @@
 				chart.draw(data,options);
 			}
 		</script>
-		<div id="chart_5_correlation" style="width:800px;height:400px;"></div>
-		<div id="chart_6_geo" style="width:800px;height:400px;"></div>
 		<script type="text/javascript">
 			google.charts.load('current',{packages:['geochart']});
 			google.charts.setOnLoadCallback(chart_6_geo);
