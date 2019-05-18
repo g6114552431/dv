@@ -12,6 +12,7 @@
 		<div id="chart_5_correlation" style="width:800px;height:400px;"></div>
 		<div id="chart_6_geo" style="width:800px;height:400px;"></div>
 		<script>
+			// chart_1_bar
 			google.charts.load('current',{packages:['corechart','bar']});
 			google.charts.setOnLoadCallback(chart_1_bar);
 			function chart_1_bar()
@@ -51,6 +52,7 @@
 			}
 		</script>
 		<script>
+			// chart_2_pie
 			google.charts.load('current',{packages:['corechart']});
 			google.charts.setOnLoadCallback(chart_2_pie);
 			function chart_2_pie()
@@ -66,7 +68,7 @@
 				]);
 				var options=
 				{
-					title:'รายจ่ายแต่ละประเภท เดือน 11/2016',
+					title:'รายจ่ายแต่ละประเภท เดือน 11/2016 (บาท)',
 					width:800,
 					height:400
 				};
@@ -75,6 +77,7 @@
 			}
 		</script>
 		<script>
+			// chart_3_deviation
 			google.charts.load('current',{packages:['corechart','bar']});
 			google.charts.setOnLoadCallback(chart_3_deviation);
 			function chart_3_deviation()
@@ -103,6 +106,7 @@
 			}
 		</script>
 		<script>
+			// chart_4_histogram
 			google.charts.load('current',{packages:['corechart']});
 			google.charts.setOnLoadCallback(chart_4_histogram);
 			function chart_4_histogram()
@@ -127,18 +131,20 @@
 			}
 		</script>
 		<script>
+			// chart_5_correlation
 			var img=document.createElement("IMG");
 			img.src="chart_5_correlation.png";
 			document.getElementById('chart_5_correlation').appendChild(img);
 		</script>
 		<script>
+			// chart_6_geo
 			google.charts.load('current',{packages:['geochart']});
 			google.charts.setOnLoadCallback(chart_6_geo);
 			function chart_6_geo()
 			{
 				var data=google.visualization.arrayToDataTable(
 				[
-					['Country','Pay'],
+					['Country','รายจ่าย (บาท)'],
 					['Thailand',8659.47],
 					['Malaysia',11001.19]
 				]);
