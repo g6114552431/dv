@@ -1,16 +1,78 @@
 <html>
 	<head>
-		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script src="https://www.gstatic.com/charts/loader.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	</head>
 	<body>
-		<h1>Data Visualization & Communication</h1>
-		<p>นาย นัทธร ทองกำเหนิด 6114552431</p>
-		<div id="chart_1_bar" style="width:900px;height:450px;"></div>
-		<div id="chart_2_pie" style="width:900px;height:450px;"></div>
-		<div id="chart_3_deviation" style="width:900px;height:450px;"></div>
-		<div id="chart_4_histogram" style="width:900px;height:450px;"></div>
-		<div id="chart_5_correlation" style="width:900px;height:450px;"></div>
-		<div id="chart_6_geo" style="width:900px;height:450px;"></div>
+		<div style="width:900px;margin:auto">
+			<h1 style="text-align:center">บันทึกรายจ่าย 10/2016 - 5/2017</h1>
+			<p style="text-align:center">นาย นัทธร ทองกำเหนิด 6114552431</p>
+			<div style="width:900px;height:525px;position:absolute">
+				<div id="chart_1_bar" class="chart"></div>
+				<div id="chart_2_pie" class="chart"></div>
+				<div id="chart_3_deviation" class="chart"></div>
+				<div id="chart_4_histogram" class="chart"></div>
+				<div id="chart_5_correlation" class="chart"></div>
+				<div id="chart_6_geo" class="chart"></div>
+			</div>
+		</div>
+		<script>
+			var charts=document.getElementsByClassName("chart");
+			function reset()
+			{
+				for(var i=0;i<charts.length;i++)
+				{
+					charts[i].style.zIndex=0;
+					charts[i].style.left=i*900/6+"px";
+					charts[i].style.top=450+"px";
+					charts[i].style.width=900+"px";
+					charts[i].style.height=450+"px";
+					charts[i].style.position="absolute";
+					charts[i].style.transformOrigin="0 0";
+					charts[i].style.transform="scale("+1/6+")";
+					charts[i].style.transitionProperty="left,top,transform";
+					charts[i].style.transitionDuration=3000+"ms";
+				}
+				setTimeout(function(){addEvent();},1000);
+			}
+			function set_active(x)
+			{
+				charts[x].style.zIndex=1;
+				charts[x].style.left="0px";
+				charts[x].style.top="0px";
+				charts[x].style.transform="scale(1)";
+			}
+			var active=0;
+			reset();
+			setTimeout(function(){set_active(active);},1000);
+			function addEvent()
+			{
+				charts[0].addEventListener("mouseenter",charts0_mouseenter);
+				charts[1].addEventListener("mouseenter",charts1_mouseenter);
+				charts[2].addEventListener("mouseenter",charts2_mouseenter);
+				charts[3].addEventListener("mouseenter",charts3_mouseenter);
+				charts[4].addEventListener("mouseenter",charts4_mouseenter);
+				charts[5].addEventListener("mouseenter",charts5_mouseenter);
+			}
+			function charts0_mouseenter(){removeEvent(active);reset();set_active(active=0);}
+			function charts1_mouseenter(){removeEvent(active);reset();set_active(active=1);}
+			function charts2_mouseenter(){removeEvent(active);reset();set_active(active=2);}
+			function charts3_mouseenter(){removeEvent(active);reset();set_active(active=3);}
+			function charts4_mouseenter(){removeEvent(active);reset();set_active(active=4);}
+			function charts5_mouseenter(){removeEvent(active);reset();set_active(active=5);}
+			function removeEvent(n)
+			{
+				switch(n)
+				{
+					case 0:{charts[0].removeEventListener("mouseenter",charts0_mouseenter);}break;
+					case 1:{charts[1].removeEventListener("mouseenter",charts1_mouseenter);}break;
+					case 2:{charts[2].removeEventListener("mouseenter",charts2_mouseenter);}break;
+					case 3:{charts[3].removeEventListener("mouseenter",charts3_mouseenter);}break;
+					case 4:{charts[4].removeEventListener("mouseenter",charts4_mouseenter);}break;
+					case 5:{charts[5].removeEventListener("mouseenter",charts5_mouseenter);}break;
+				}
+			}
+		</script>
 		<script>
 			// chart_1_bar
 			google.charts.load('current',{packages:['corechart','bar']});
@@ -133,6 +195,7 @@
 		<script>
 			// chart_5_correlation
 			var img=document.createElement("IMG");
+			img.style.backgroundColor="#ffffff";
 			img.src="chart_5_correlation.png";
 			document.getElementById('chart_5_correlation').appendChild(img);
 		</script>
