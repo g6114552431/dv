@@ -5,12 +5,12 @@
 	<body>
 		<h1>Data Visualization & Communication</h1>
 		<p>นาย นัทธร ทองกำเหนิด 6114552431</p>
-		<div id="chart_1_bar" style="width:800px;height:400px;"></div>
-		<div id="chart_2_pie" style="width:800px;height:400px;"></div>
-		<div id="chart_3_deviation" style="width:800px;height:400px;"></div>
-		<div id="chart_4_histogram" style="width:800px;height:400px;"></div>
-		<div id="chart_5_correlation" style="width:800px;height:400px;"></div>
-		<div id="chart_6_geo" style="width:800px;height:400px;"></div>
+		<div id="chart_1_bar" style="width:900px;height:450px;"></div>
+		<div id="chart_2_pie" style="width:900px;height:450px;"></div>
+		<div id="chart_3_deviation" style="width:900px;height:450px;"></div>
+		<div id="chart_4_histogram" style="width:900px;height:450px;"></div>
+		<div id="chart_5_correlation" style="width:900px;height:450px;"></div>
+		<div id="chart_6_geo" style="width:900px;height:450px;"></div>
 		<script>
 			// chart_1_bar
 			google.charts.load('current',{packages:['corechart','bar']});
@@ -34,8 +34,8 @@
 					vAxis:{title:'รายจ่าย (บาท)',maxValue:20000},
 					bar:{groupWidth:'90%'},
 					legend:{position:'none'},
-					width:800,
-					height:400,
+					width:900,
+					height:450,
 					animation:{duration:1000}
 				};
 				var chart=new google.visualization.ColumnChart(document.getElementById('chart_1_bar'));
@@ -69,8 +69,8 @@
 				var options=
 				{
 					title:'รายจ่ายแต่ละประเภท เดือน 11/2016 (บาท)',
-					width:800,
-					height:400
+					width:900,
+					height:450
 				};
 				var chart=new google.visualization.PieChart(document.getElementById('chart_2_pie'));
 				chart.draw(data,options);
@@ -98,8 +98,8 @@
 					vAxis:{title:'รายจ่าย (บาท)'},
 					bar:{groupWidth:'90%'},
 					legend:{position:'none'},
-					width:800,
-					height:400
+					width:900,
+					height:450
 				};
 				var chart=new google.visualization.ColumnChart(document.getElementById('chart_3_deviation'));
 				chart.draw(data,options);
@@ -123,8 +123,8 @@
 					hAxis:{title:'ช่วงราคา (บาท)'},
 					vAxis:{title:'ความถี่'},
 					legend:{position:'none'},
-					width:800,
-					height:400
+					width:900,
+					height:450
 				};
 				var chart=new google.visualization.Histogram(document.getElementById('chart_4_histogram'));
 				chart.draw(data,options);
@@ -159,8 +159,8 @@
 						colors:['green','yellow','red']
 					},
 					title:'รายจ่ายที่เกิดขึ้นแต่ละประเทศ เดือน 11/2016',
-					width:800,
-					height:400
+					width:900,
+					height:450
 				};
 				var chart=new google.visualization.GeoChart(document.getElementById('chart_6_geo'));
 				chart.draw(data,options);
