@@ -51,12 +51,12 @@
 					height:400,
 					animation:
 					{
-						duration:5000,
-						easing:'out'
+						startup:true,
+						duration:1000,
 					}
 				};
 				var chart=new google.visualization.ColumnChart(document.getElementById('chart_1_bar'));
-				chart.draw(data0,options);
+				// chart.draw(data0,options);
 				chart.draw(data1,options);
 			}
 		</script>
