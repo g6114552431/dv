@@ -16,19 +16,7 @@
 			google.charts.setOnLoadCallback(chart_1_bar);
 			function chart_1_bar()
 			{
-				var data0=google.visualization.arrayToDataTable(
-				[
-					['Month','รายจ่าย (บาท)'],
-					['10/2016',0],
-					['11/2016',0],
-					['12/2016',0],
-					['1/2017',0],
-					['2/2017',0],
-					['3/2017',0],
-					['4/2017',0],
-					['5/2017',0]
-				]);
-				var data1=google.visualization.arrayToDataTable(
+				var data=google.visualization.arrayToDataTable(
 				[
 					['Month','รายจ่าย (บาท)'],
 					['10/2016',9780.31],
@@ -56,8 +44,7 @@
 					}
 				};
 				var chart=new google.visualization.ColumnChart(document.getElementById('chart_1_bar'));
-				// chart.draw(data0,options);
-				chart.draw(data1,options);
+				chart.draw(data,options);
 			}
 		</script>
 		<script>
@@ -78,7 +65,12 @@
 				{
 					title:'รายจ่ายแต่ละประเภท เดือน 11/2016',
 					width:800,
-					height:400
+					height:400,
+					animation:
+					{
+						startup:true,
+						duration:1000,
+					}
 				};
 				var chart=new google.visualization.PieChart(document.getElementById('chart_2_pie'));
 				chart.draw(data,options);
@@ -106,7 +98,12 @@
 					bar:{groupWidth:'90%'},
 					legend:{position:'none'},
 					width:800,
-					height:400
+					height:400,
+					animation:
+					{
+						startup:true,
+						duration:1000,
+					}
 				};
 				var chart=new google.visualization.ColumnChart(document.getElementById('chart_3_deviation'));
 				chart.draw(data,options);
@@ -130,13 +127,21 @@
 					vAxis:{title:'ความถี่'},
 					legend:{position:'none'},
 					width:800,
-					height:400
+					height:400,
+					animation:
+					{
+						startup:true,
+						duration:1000,
+					}
 				};
 				var chart=new google.visualization.Histogram(document.getElementById('chart_4_histogram'));
 				chart.draw(data,options);
 			}
 		</script>
-		<script type="text/javascript">
+		<script>
+			// chart_5_correlation
+		</script>
+		<script>
 			google.charts.load('current',{packages:['geochart']});
 			google.charts.setOnLoadCallback(chart_6_geo);
 			function chart_6_geo()
@@ -159,7 +164,12 @@
 					},
 					title:'รายจ่ายแต่ละประเภท เดือน 11/2016',
 					width:800,
-					height:400
+					height:400,
+					animation:
+					{
+						startup:true,
+						duration:1000,
+					}
 				};
 				var chart=new google.visualization.GeoChart(document.getElementById('chart_6_geo'));
 				chart.draw(data,options);
