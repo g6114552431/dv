@@ -206,7 +206,7 @@
 			function chart_6_geo()
 			{
 				var data=google.visualization.arrayToDataTable(
-				[
+					[
 					['Country','รายจ่าย (บาท)'],
 					['Thailand',8659.47],
 					['Malaysia',11001.19]
@@ -227,6 +227,15 @@
 				};
 				var chart=new google.visualization.GeoChart(document.getElementById('chart_6_geo'));
 				chart.draw(data,options);
+				var p=document.createElement("P");
+				p.style.left="0px";
+				p.style.top="0px";
+				p.style.width="100%";
+				p.style.fontWeight="bold";
+				p.style.textAlign="center";
+				p.style.position="absolute";
+				p.textContent="รายจ่ายที่เกิดขึ้นแต่ละประเทศ เดือน 11/2016";
+				document.getElementById('chart_6_geo').appendChild(p);
 			}
 		</script>
 	</body>
