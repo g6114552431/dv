@@ -134,20 +134,18 @@
 				var data=google.visualization.arrayToDataTable(
 				[
 					['Type','Pay'],
-[1,1573.31],[2,2290],[3,199],[4,5541],[5,177],
-[1,6972.69],[2,1236.6],[3,1056.67],[4,5897],[5,4497.7],
-[1,1580.84],[2,2200],[3,445],[4,4174],[5,3703.5],
-[1,1621.96],[2,1420],[3,171],[4,4031],[5,170],
-[1,3772.25],[2,490],[3,119],[4,3826],[5,2870],
-[1,2010.48],[2,750],[3,55],[4,4502],[5,367],
-[1,1231.26],[2,2230],[3,100],[4,3897],[5,5351],
-[1,1510],[2,900],[3,250],[4,4252],[5,1009.54]
+					[8,12],
+					[4,5.5],
+					[11,14],
+					[4,5],
+					[3,3.5],
+					[6.5,7]
 				]);
 				var options=
 				{
 					title:'Age vs. Weight comparison',
-					// hAxis:{title:'Age',minValue:0,maxValue:15},
-					// vAxis:{title:'Weight',minValue:0,maxValue:15},
+					hAxis:{title:'Age',minValue:0,maxValue:15},
+					vAxis:{title:'Weight',minValue:0,maxValue:15},
 					legend:'none'
 				};
 				var chart=new google.visualization.ScatterChart(document.getElementById('chart_5_scatter'));
