@@ -3,8 +3,8 @@
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	</head>
 	<body>
-		<h1>Hello World Data</h1>
-		<p>I'm hosted with GitHub Pages. Visualization</p>
+		<h1>Hello World</h1>
+		<p>I'm hosted with GitHub Pages.</p>
 		<div id="chart_1_bar"></div>
 		<script>
 			google.charts.load('current',{packages:['corechart','bar']});
@@ -116,11 +116,10 @@
 				chart.draw(data,options);
 			}
 		</script>
-		<div id="chart_6_geo" style="width:900px; height:500px;"></div>
+		<div id="chart_6_geo"></div>
+		<!-- <div id="chart_6_geo" style="width:900px; height:500px;"></div> -->
 		<script type="text/javascript">
-			google.charts.load('current',{packages:['geochart'],
-				// 'mapsApiKey':'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
-			});
+			google.charts.load('current',{packages:['geochart']});
 			google.charts.setOnLoadCallback(chart_6_geo);
 			function chart_6_geo()
 			{
