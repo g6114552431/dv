@@ -16,7 +16,103 @@
 			google.charts.setOnLoadCallback(chart_1_bar);
 			function chart_1_bar()
 			{
-				var data=google.visualization.arrayToDataTable(
+				var data0=google.visualization.arrayToDataTable(
+				[
+					['Month','รายจ่าย (บาท)'],
+					['10/2016',0],
+					['11/2016',0],
+					['12/2016',0],
+					['1/2017',0],
+					['2/2017',0],
+					['3/2017',0],
+					['4/2017',0],
+					['5/2017',0]
+				]);
+				var data1=google.visualization.arrayToDataTable(
+				[
+					['Month','รายจ่าย (บาท)'],
+					['10/2016',9780.31],
+					['11/2016',0],
+					['12/2016',0],
+					['1/2017',0],
+					['2/2017',0],
+					['3/2017',0],
+					['4/2017',0],
+					['5/2017',0]
+				]);
+				var data2=google.visualization.arrayToDataTable(
+				[
+					['Month','รายจ่าย (บาท)'],
+					['10/2016',9780.31],
+					['11/2016',19660.66],
+					['12/2016',0],
+					['1/2017',0],
+					['2/2017',0],
+					['3/2017',0],
+					['4/2017',0],
+					['5/2017',0]
+				]);
+				var data3=google.visualization.arrayToDataTable(
+				[
+					['Month','รายจ่าย (บาท)'],
+					['10/2016',9780.31],
+					['11/2016',19660.66],
+					['12/2016',12103.34],
+					['1/2017',0],
+					['2/2017',0],
+					['3/2017',0],
+					['4/2017',0],
+					['5/2017',0]
+				]);
+				var data4=google.visualization.arrayToDataTable(
+				[
+					['Month','รายจ่าย (บาท)'],
+					['10/2016',9780.31],
+					['11/2016',19660.66],
+					['12/2016',12103.34],
+					['1/2017',7413.96],
+					['2/2017',0],
+					['3/2017',0],
+					['4/2017',0],
+					['5/2017',0]
+				]);
+				var data5=google.visualization.arrayToDataTable(
+				[
+					['Month','รายจ่าย (บาท)'],
+					['10/2016',9780.31],
+					['11/2016',19660.66],
+					['12/2016',12103.34],
+					['1/2017',7413.96],
+					['2/2017',11077.25],
+					['3/2017',0],
+					['4/2017',0],
+					['5/2017',0]
+				]);
+				var data6=google.visualization.arrayToDataTable(
+				[
+					['Month','รายจ่าย (บาท)'],
+					['10/2016',9780.31],
+					['11/2016',19660.66],
+					['12/2016',12103.34],
+					['1/2017',7413.96],
+					['2/2017',11077.25],
+					['3/2017',7684.48],
+					['4/2017',0],
+					['5/2017',0]
+				]);
+				var data7=google.visualization.arrayToDataTable(
+				[
+					['Month','รายจ่าย (บาท)'],
+					['10/2016',9780.31],
+					['11/2016',19660.66],
+					['12/2016',12103.34],
+					['1/2017',7413.96],
+					['2/2017',11077.25],
+					['3/2017',7684.48],
+					['4/2017',12809.26],
+					['5/2017',0]
+				]);
+				var data8=google.visualization.arrayToDataTable(
 				[
 					['Month','รายจ่าย (บาท)'],
 					['10/2016',9780.31],
@@ -39,12 +135,20 @@
 					height:400,
 					animation:
 					{
-						startup:true,
+						// startup:true,
 						duration:1000,
 					}
 				};
 				var chart=new google.visualization.ColumnChart(document.getElementById('chart_1_bar'));
-				chart.draw(data,options);
+				chart.draw(data0,options);
+				chart.draw(data1,options);
+				chart.draw(data2,options);
+				chart.draw(data3,options);
+				chart.draw(data4,options);
+				chart.draw(data5,options);
+				chart.draw(data6,options);
+				chart.draw(data7,options);
+				chart.draw(data8,options);
 			}
 		</script>
 		<script>
