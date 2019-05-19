@@ -91,7 +91,6 @@
 				data[8]=google.visualization.arrayToDataTable([['Month','รายจ่าย (บาท)'],['10/2016',9780.31],['11/2016',19660.66],['12/2016',12103.34],['1/2017',7413.96],['2/2017',11077.25],['3/2017',7684.48],['4/2017',12809.26],['5/2017',7921.54]]);
 				var options=
 				{
-					title:'รายจ่ายรวมแต่ละเดือน',
 					hAxis:{title:'เดือน/ปี'},
 					vAxis:{title:'รายจ่าย (บาท)',maxValue:20000},
 					bar:{groupWidth:'90%'},
@@ -111,6 +110,15 @@
 						clearInterval(interval);
 					}
 				},500);
+				var p=document.createElement("P");
+				p.style.left="0px";
+				p.style.top="0px";
+				p.style.width="100%";
+				p.style.textAlign="center";
+				p.style.fontWeight="bold";
+				p.style.position="absolute";
+				p.textContent="รายจ่ายรวมแต่ละเดือน";
+				document.getElementById('chart_1_bar').appendChild(p);
 			}
 		</script>
 		<script>
@@ -130,12 +138,20 @@
 				]);
 				var options=
 				{
-					title:'รายจ่ายแต่ละประเภท เดือน 11/2016 (บาท)',
 					width:900,
 					height:450
 				};
 				var chart=new google.visualization.PieChart(document.getElementById('chart_2_pie'));
 				chart.draw(data,options);
+				var p=document.createElement("P");
+				p.style.left="0px";
+				p.style.top="0px";
+				p.style.width="100%";
+				p.style.textAlign="center";
+				p.style.fontWeight="bold";
+				p.style.position="absolute";
+				p.textContent="รายจ่ายแต่ละประเภท เดือน 11/2016 (บาท)";
+				document.getElementById('chart_2_pie').appendChild(p);
 			}
 		</script>
 		<script>
@@ -155,7 +171,6 @@
 				]);
 				var options=
 				{
-					title:'รายจ่ายแต่ละประเภท เดือน 5/2017 เทียบกับเดือน 4/2017',
 					hAxis:{title:'ประเภท'},
 					vAxis:{title:'รายจ่าย (บาท)'},
 					bar:{groupWidth:'90%'},
@@ -165,6 +180,15 @@
 				};
 				var chart=new google.visualization.ColumnChart(document.getElementById('chart_3_deviation'));
 				chart.draw(data,options);
+				var p=document.createElement("P");
+				p.style.left="0px";
+				p.style.top="0px";
+				p.style.width="100%";
+				p.style.textAlign="center";
+				p.style.fontWeight="bold";
+				p.style.position="absolute";
+				p.textContent="รายจ่ายแต่ละประเภท เดือน 5/2017 เทียบกับเดือน 4/2017";
+				document.getElementById('chart_3_deviation').appendChild(p);
 			}
 		</script>
 		<script>
@@ -181,7 +205,6 @@
 				var options=
 				{
 					histogram:{bucketSize:10},
-					title:'Histogram ของรายจ่ายแต่ละรายการ ระหว่างเดือน 10/2016 - 5/2017 (ลบ outliers แล้ว)',
 					hAxis:{title:'ช่วงราคา (บาท)'},
 					vAxis:{title:'ความถี่'},
 					legend:{position:'none'},
@@ -190,6 +213,15 @@
 				};
 				var chart=new google.visualization.Histogram(document.getElementById('chart_4_histogram'));
 				chart.draw(data,options);
+				var p=document.createElement("P");
+				p.style.left="0px";
+				p.style.top="0px";
+				p.style.width="100%";
+				p.style.textAlign="center";
+				p.style.fontWeight="bold";
+				p.style.position="absolute";
+				p.textContent="Histogram ของรายจ่ายแต่ละรายการ ระหว่างเดือน 10/2016 - 5/2017 (ลบ outliers แล้ว)";
+				document.getElementById('chart_4_histogram').appendChild(p);
 			}
 		</script>
 		<script>
@@ -221,7 +253,6 @@
 						maxValue:12500,
 						colors:['green','yellow','red']
 					},
-					title:'รายจ่ายที่เกิดขึ้นแต่ละประเทศ เดือน 11/2016',
 					width:900,
 					height:450
 				};
@@ -231,8 +262,8 @@
 				p.style.left="0px";
 				p.style.top="0px";
 				p.style.width="100%";
-				p.style.fontWeight="bold";
 				p.style.textAlign="center";
+				p.style.fontWeight="bold";
 				p.style.position="absolute";
 				p.textContent="รายจ่ายที่เกิดขึ้นแต่ละประเทศ เดือน 11/2016";
 				document.getElementById('chart_6_geo').appendChild(p);
