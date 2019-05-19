@@ -9,11 +9,11 @@
 			<p style="text-align:center">นาย นัทธร ทองกำเหนิด 6114552431</p>
 			<div style="width:900px;height:525px;position:absolute">
 				<div id="chart_1_bar" class="chart"></div>
-				<div id="chart_2_pie" class="chart"></div>
-				<div id="chart_3_deviation" class="chart"></div>
 				<div id="chart_4_histogram" class="chart"></div>
 				<div id="chart_5_correlation" class="chart"></div>
+				<div id="chart_2_pie" class="chart"></div>
 				<div id="chart_6_geo" class="chart"></div>
+				<div id="chart_3_deviation" class="chart"></div>
 			</div>
 		</div>
 		<script>
@@ -163,11 +163,11 @@
 				var data=google.visualization.arrayToDataTable(
 				[
 					['Type','อัตราเพิ่ม (บาท)',{ role:'style'}],
-					['อาหาร/เครื่องดื่ม',355,'red'],
-					['การเดินทาง',278.74,'red'],
-					['สินค้า',150,'red'],
-					['กิจกรรม',-1330,'green'],
-					['อื่นๆ',-4341.46,'green']
+					['กิจกรรม',963.4,'red'],
+					['สินค้า',-611.67,'green'],
+					['อื่นๆ',-794.2,'green'],
+					['อาหาร/เครื่องดื่ม',-1723,'green'],
+					['การเดินทาง',-5391.85,'green'],
 				]);
 				var options=
 				{
@@ -187,7 +187,7 @@
 				p.style.textAlign="center";
 				p.style.fontWeight="bold";
 				p.style.position="absolute";
-				p.textContent="รายจ่ายแต่ละประเภท เดือน 5/2017 เทียบกับเดือน 4/2017";
+				p.textContent="รายจ่ายแต่ละประเภท เดือน 12/2016 เทียบกับเดือน 11/2016";
 				document.getElementById('chart_3_deviation').appendChild(p);
 			}
 		</script>
